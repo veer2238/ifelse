@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        background-color: cadetblue;
+     
+    }
+
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        height: 80px;
+    }
+
+    li{
+        list-style: none;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .home{
+        position: absolute;
+        top: 100px;
+        left: 400px;
+        display: none;
+    }
+</style>
+<body>
+    <div class="main">
+        <ul>
+
+            <div>
+            <li onclick="show()">home</li>
+            <div class="home" id="home">
+                <img src="./image/home.png" height="100px" width="100px">
+            </div>
+        </div>
+            <li onclick="show()">service</li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </div>
+ 
+</body>
+
+<script>
+    var hidden = document.getElementById('home')
+
+    function show(){
+        if(hidden.style.display !== 'block'){
+            hidden.style.display = 'block'
+        }else{
+            hidden.style.display = 'none'
+
+        }
+    }
+</script>
+
+
+</html>

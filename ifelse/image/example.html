@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .inv {
+        display: none;
+        
+    
+    }
+    
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: burlywood;
+        height: 300px;
+        flex-direction:column ;
+    }
+        </style>
+<body>
+
+    <div class="main">
+        <select id="target">
+            <option value="">Select...</option>
+            <option value="content_1">Option 1</option>
+            <option value="content_2">Option 2</option>
+            <option value="content_3">Option 3</option>
+        </select>
+
+        <div id="content_1" style="border: 1px solid black; width: 250px ; margin-top: 30px; " class="inv">101,kunal complex,nizampura,vadodara</div>
+        <div id="content_2"style="border: 1px solid black; width: 250px ; margin-top: 30px;" class="inv">mumbai colony 3 behind f park,mumbai</div>
+        <div id="content_3" style="border: 1px solid black; width: 250px ; margin-top: 30px;" class="inv">haidrabad, j p road ,earth park,heidrabad</div>
+    </div>
+ 
+    </div>
+
+
+        
+
+    
+</body>
+
+<script>
+    document
+        .getElementById('target')
+        .addEventListener('change', function () {
+            'use strict';
+            var vis = document.querySelector('.vis'),   
+                target = document.getElementById(this.value);
+            if (vis !== null) {
+                vis.className = 'inv';
+            }
+            if (target !== null ) {
+                target.className = 'vis';
+            }
+    });
+</script>
+</html>
